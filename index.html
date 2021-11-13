@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Quiz Spartan User Manual</title>
+  <link rel="icon" href="images/assessment-file.svg">
+  <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+</head>
+<body style="background-color: var(--gray3);">
+  <button onclick="topFunction()" id="back-to-top-button">Back to top</button>
+  <main class="row p-3 m-0">
+    <article class="col-lg-7 my-3 mx-auto bg-white py-3 px-4 rounded-lg pb-5">
+      <header class="text-center px-2 py-5 mb-5">
+        <img src="images/quiz-spartan-user-manual.svg" alt="quiz-spartan-user-manual" style="max-width: 400px;width: 100%;">
+      </header>
+      <article>
+        <header class="d-flex align-items-center" style="font-size: 23px;">
+          <span>Sections</span>
+          <span class="iconify ml-2" data-icon="ic:round-content-paste-go" style="font-size: 30px;"></span>
+        </header>
+        <section class="px-3 my-3">
+          <ul>
+            <li class="my-2"><a href="#what-is-quiz-spartan">What is Quiz Spartan?</a></li>
+            <li class="my-2"><a href="#logging-quiz-spartan">Logging in to Quiz Spartan</a></li>
+            <li class="my-2">
+              <a href="#main-page">Main Page</a>
+              <ul class="px-4" style="list-style-type:disc;">  
+                <li class="my-2"><a href="#main-page-file-types">File Types</a></li>
+                <li class="my-2"><a href="#main-page-creating-files">Creating Files</a></li>
+                <li class="my-2"><a href="#main-page-searching-files">Searching Files</a></li>
+                <li class="my-2"><a href="#main-page-file-operations">File Operations</a></li>
+                <li class="my-2"><a href="#main-page-sidebar">Sidebar</a></li>
+              </ul>
+            </li>
+            <li class="my-2">
+              <a href="#assessment">Assessment</a>
+              <ul class="px-4" style="list-style-type:disc;">
+                <li class="my-2"><a href="#assessment-filename">Assessment filename</a></li>
+                <li class="my-2"><a href="#assessment-adding-question">Adding question</a></li>
+                <li class="my-2"><a href="#assessment-question-types">Question types</a></li>
+                <li class="my-2"><a href="#assessment-adding-section">Adding section</a></li>
+                <li class="my-2"><a href="#assessment-other-functionalities">Other functionalities</a></li>
+              </ul>
+            </li>
+            <li class="my-2">
+              <a href="#programming-quiz">Programming quiz</a>
+              <ul class="px-4" style="list-style-type:disc;">
+                <li class="my-2"><a href="#programming-quiz-adding-problem">Adding programming problem</a></li>
+                <li class="my-2"><a href="#programming-quiz-problem-statement-test-cases">Problem statement and test cases</a></li>
+              </ul>
+            </li>
+            <li class="my-2"><a href="#saving-assessment">Saving assessment</a></li>
+            <li class="my-2"><a href="#previewing-assessment">Previewing assessment</a></li>
+            <li class="my-2">
+              <a href="#sending-assessment">Sending assessment</a>
+              <ul class="px-4" style="list-style-type:disc;">
+                <li class="my-2"><a href="#sending-assessment-via-email">Via Email</a></li>
+                <li class="my-2"><a href="#sending-assessment-via-link">Via Link</a></li>
+              </ul>
+            </li>
+            <li class="my-2"><a href="#settings">Settings</a></li>
+            <li class="my-2">
+              <a href="#submissions">Submissions</a>
+              <ul class="px-4" style="list-style-type:disc;">
+                <li class="my-2"><a href="#submissions-summary">Summary of submissions</a></li>
+                <li class="my-2"><a href="#submissions-individual">Individual submissions</a></li>
+                <li class="my-2"><a href="#releasing-scores">Releasing all scores</a></li>
+                <li class="my-2"><a href="#saving-email-address">Saving email address</a></li>
+                <li class="my-2"><a href="#exporting-google-sheets">Exporting to Google Sheets</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <hr id="what-is-quiz-spartan" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>What is Quiz Spartan?</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Quiz Spartan is a web-based assessment tool developed for Batangas State University. This tool can be used to create traditional assessments which includes identification, multiple choice and essay type of questions. It can also be used to create programming quizzes with supported programming languages including C++, Java and Python. Since assessments created using Quiz Spartan will be answered online, the system can detect academic dishonesties which includes switching of tabs, opening another application and similarity in essay answers.
+        </section>
+        <section class="my-3">
+          <p>Below are the sample assessments create using Quiz Spartan:</p>
+          <p>Assessment: <a href="https://quiz-spartan.herokuapp.com/assessment/share/616edbe9d028761ec2a9d488" target="_blank">share/616edbe9d028761ec2a9d488</a></p>
+          <p>Programming Quiz: <a href="https://quiz-spartan.herokuapp.com/programming-quiz/share/6177c1c8e364317644330cc0" target="_blank">share/6177c1c8e364317644330cc0</a></p>
+        </section>
+      </article>
+      <hr id="logging-quiz-spartan" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Logging in to Quiz Spartan</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Since Quiz Spartan was developed for Batangas State University, users are expected to login their G-Suite accounts registered on the university. Users can login in this URL <a href="https://quiz-spartan.herokuapp.com/login/">https://quiz-spartan.herokuapp.com/login/</a>.
+        </section>
+        <img class="my-3" src="images/logging-in.svg" alt="logging-in-quiz-spartan" style="width: 100%;">
+      </article>
+      <hr id="main-page" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Main Page</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          The main page will be rendered after the user has logged in to the system. In this section, the components in the main page will be discussed including different file types, how to create and search files, the operations that can be done to these files and the functionality of the sidebar.
+        </section>
+        <img class="my-3" src="images/main-page.svg" alt="main-page-quiz-spartan" style="width: 100%;">        
+        <article id="main-page-file-types">
+          <header class="my-3" style="font-size: 20px;">
+            <span>File Types</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Below are the files that can be created in Quiz Spartan.</p>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Assessment - This will be used in creating traditional assessments with questions including identification, multiple choice, essay, checkbox, dropdown and file upload. The functionalities inside the assessment file was further discussed <a href="#assessment">here</a>.</li></ul>
+            <img class="my-3" src="images/main-page-assessment.svg" alt="">
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Programming Quiz - This will be used in creating programming quizzes. The supported programming languages are C, C++, C#, Python, Java and VB.net. The functionalities inside the programming quiz file was further discussed <a href="#programming-quiz">here</a>.</li></ul>
+            <img class="my-3" src="images/main-page-programming-quiz.svg" alt="">
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Group email - This file can be used to send assessment to all target respondents at once. The emails can be added manually or automatically when all respondents submitted their answers.</li></ul>
+            <img src="images/main-page-group-email.svg" alt="">
+            <p class="my-3">Below is the sample content of group email file.</p>
+            <img class="my-3" src="images/main-page-group-email-content.svg" alt="" style="width: 100%;">
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Folder - This is useful if the users wants to organize their created files. The assessments, programming quizzes and group emails can be created and moved into a folder.</li></ul>
+            <img class="my-3" src="images/main-page-folder.svg" alt="">
+          </section>
+        </article>
+        <article id="main-page-creating-files">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Creating Files</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>To create different files in Quiz Spartan, use the create button located on the top-right side of the tab content. </p>
+            <img class="my-3" src="images/main-page-create-button.svg" alt="">
+          </section>
+        </article>
+        <article id="main-page-searching-files">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Searching Files</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>By using the search bar on the top of the page, users can search files based on the filename or data it was modified.</p>
+            <img class="my-3" src="images/main-page-searching-files.svg" alt="" style="width: 100%;">
+          </section>
+        </article>
+        <article class="my-4" id="main-page-file-operations">
+          <header class="my-3" style="font-size: 20px;">
+            <span>File Operations</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>The operations that can be done to created files are opening, renamin, moving between folders, duplicating and deleting. Duplicating a folder will also duplicate the files inside it.</p>
+            <img class="my-3" src="images/main-page-file-operations.svg" alt="">
+          </section>
+        </article>
+        <article class="my-4" id="main-page-sidebar">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Sidebar</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Sidebar can be used to filter the created files. Files can also be created based on the currently opened tab.</p>
+          </section>
+        </article>
+      </article>
+      <hr id="assessment" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Assessment</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          This will be used in creating traditional assessments with questions including identification, multiple choice, essay, checkbox, dropdown and file upload. 
+        </section>
+        <img class="my-3" src="images/sample-assessment.svg" alt="" style="width: 100%;">
+        <article id="assessment-filename" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Assessment filename</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Users can also rename the filename of the currently opened assessment. The assesment filename input can be found on the top-left of the page.</p>
+          </section>
+        </article>
+        <article id="assessment-adding-question" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Adding question</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Users can add question by choosing the question type on the sidebar and clicking the add question button. The newly created question will be placed after the currently focused question.</p>
+          </section>
+        </article>
+        <article id="assessment-question-types" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Question types</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Currently, the supported question types in Quiz Spartan are identification, multiple choice, essay ,checkbox, dropdown and file upload. The sections below further discusses each of the question types.</p>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Identification - An identification type of question is where the examinee are expected to clearly identify or define each item. To add correct answer, click the "Add correct answer" input. To remove correct answer, click the cross button beside the correct answer. You can also set the case sensitivity for the answers.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/identification.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Multiple Choice - It is a form of an objective assessment in which respondents are asked to select only correct answers from the choices offered as a list. To add choices, click the Add option component. You can either click the radio button or the switch to set the option as the correct answer. Options are easily removed just by clicking the cross button beside the correct answer switch. Note that multiple choice question only accepts one correct answer. If the you want to have multiple correct answers, you can use checkbox.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/multiple-choice.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Essay - Since essays are subjective type of questions, setting correct answers are not needed.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/essay.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Checkbox - This type of question is similar to multiple choice except multiple correct answers can be set. Setting correct answers can be done by clicking the checkbox or the correct answer switch. Removing options is similar to multiple choice.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/checkbox.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>Dropdown - This question is very similar to multiple choice and it also accepts only one correct answer. However, it is quite useful to use if options are too many.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/dropdown.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+          <section class="my-4">
+            <ul class="ml-4"><li>File upload - This allows the examinees to upload their files. Assessment owner can set specific type of file allowed such as word document, spreadsheet, PDF, presentation, video or image.</li></ul>
+            <div class="text-center">
+              <img class="my-3" src="images/file-upload.svg" alt="" style="max-width: 700px;width: 100%;">
+            </div>
+          </section>
+        </article>
+        <article id="assessment-adding-section" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Adding section</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Sections are great in separating the context pf questions. You can add section by clicking the dropdown inside the add question button.</p>
+          </section>
+        </article>
+        <article id="assessment-other-functionalities" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Other functionalities</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>This section discusses the functionalities of the components at the bottom of the question in sequence from left to right.</p>
+          </section>
+          <ul class="ml-4 mt-4">
+            <li>Adding points - Located at the left side of the bottom component, users can enter the points for the focused question. </li>
+            <li>Move up - This moves the current focused question up.</li>
+            <li>Move down - This moves the current focused question down.</li>
+            <li>Duplicate - Duplicates the current focused question.</li>
+            <li>Add youtube video - Adds a youtube video to the question. To add a video, get the ID from youtube video URL. Youtube id will be found in https://www.youtube.com/watch?v=<strong>id</strong></li>
+            <li>Add image - Adds an image to the quesiton. Images should be uploaded to Images folder inside Quiz Spartan folder on your Google Drive.</li>
+            <li>Delete - Deletes the current focused question.</li>
+          </ul>
+        </article>
+      </article>
+      <hr id="programming-quiz" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Programming quiz</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          This will be used in creating programming quizzes. The supported programming languages are C, C++, C#, Python, Java and VB.net.
+        </section>
+        <img class="my-3" src="images/sample-programming-quiz.svg" alt="" style="width: 100%;">
+        <article id="programming-quiz-adding-problem" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Adding programming problem</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Users can add a programming problem clicking the add button. The language for each problem will based on the chosen language in the sidebar.</p>
+          </section>
+        </article>
+        <article id="programming-quiz-problem-statement-test-cases" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Problem statement and test cases</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>The first input on the top of the problem is where you would put the problem statement. In the sample image above, the problem statement is "Write a program in Python to add two numbers". A test case is a way to test and score the submitted source code. There are two types of test case in Quiz Spartan: visible test case and hidden test case. Unlike hidden test cases, visible test cases are not scored since examinees can see the input and expected output, they can easily satisfy the expected output through printing. Setting multiple inputs can be done by entering the subsequent inputs on the next line.</p>
+          </section>
+        </article>
+      </article>
+      <hr id="saving-assessment" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Saving assessment</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Users can save their assessment or programming quiz by clicking the save icon located on the top of the page. Quiz Spartan can also save your work automatically 15 seconds after it detected the changes.
+        </section>
+      </article>
+      <hr id="previewing-assessment" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Previewing assessment</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Previwing the created assessment or programming quiz can be done after clicking the eye icon located on the top of the page. The user interface that will be rendered is what the examinees will see when they answer the assessment. Below are the sample previewed assessment and programming quiz.
+        </section>
+        <section class="my-4">
+          <ul class="ml-4"><li>Previewed assessment</li></ul>
+          <img class="my-3" src="images/preview-assessment.svg" alt="" width="100%">
+        </section>
+        <section class="my-4">
+          <ul class="ml-4"><li>Previewed programming quiz</li></ul>
+          <img class="my-3" src="images/preview-programming-quiz.svg" alt="" width="100%">
+        </section>
+      </article>
+      <hr id="sending-assessment" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Sending assessment</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Sending assessment or programming quiz can be done via email and via link. The modal will appear after clicking the send button located on the top of the page. 
+        </section>
+        <img class="my-3" src="images/sending-assessment.svg" alt="" width="100%">
+        <article id="sending-assessment-via-email" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Via Email</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>In sending assessments via email, users can enter individual email address or use a group email as shown below.</p>
+          </section>
+          <div class="text-center">
+            <img class="my-3" src="images/sending-assessment-email.svg" alt="" style="max-width: 750px; width: 100%;">
+          </div>
+        </article>
+        <article id="sending-assessment-via-link" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Via Link</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Users can also send the assessment via link.</p>
+          </section>
+          <div class="text-center">
+            <img class="my-3" src="images/sending-assessment-link.svg" alt="" style="max-width: 750px; width: 100%;">
+          </div>
+        </article>
+      </article>
+      <hr id="settings" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Settings</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Users can set the settings in created assessments and programming quizzes by clicking the settings button located on the top of the page. The settings is divided into three sections: time, general and assessment.
+        </section>
+        <img class="my-3" src="images/settings.svg" alt="" width="100%">
+        <ul class="ml-4 mt-4">
+          <li>Time - Assessment owners can set whether to accept or not accept submissions. If enabled, examiners can enter the start and end time of the assessment. If left blank, the assessment can be accessed anytime.</li>
+          <li>General - In general settings, examiners can enable retaking of assessment, shuffling of question order and releasing scores after submission.</li>
+          <li>Assessment - This contains configurations for detecting switching of tabs and displaying the essay similarity table. The latter will only be available in assessments not in programming quizzes.</li>
+        </ul>
+      </article>
+      <hr id="submissions" class="my-5">
+      <article>
+        <header class="my-3" style="font-size: 23px;">
+          <span>Submissions</span>
+        </header>
+        <section class="text-justify my-3" style="text-indent: 30px;">
+          Submissions tab holds all the information concerning the submitted assessments. It includes summary of submissions, individual submissions and functionalities such as releasing all scores, saving emails addresses to create group email and exporting the summary of submissions to Google Sheets.
+        </section>
+        <img class="my-3" src="images/submissions.svg" alt="" width="100%">
+        <article id="submissions-summary" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Summary of submissions</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>The summary of submissions contains set of tables containing information for all submissions and detected academic dishonesties. The all submissions table displays the name, email, time took to finished answering, score, and attempt number of the examinee. The tables for detected academic dishonesties are the switched tabs table and the essay similarity table which are both displayed below the all submissions table. The similarity can be filtered by configuring the similarity percentage as shown below.</p>
+          </section>
+          <img class="my-3" src="images/submissions-similar-essay.svg" alt="" width="100%">
+        </article>
+        <article id="submissions-individual" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Individual submissions</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Individual submissions display the answered assessment by the examinee. The sample answered programming quiz is shown below.</p>
+          </section>
+          <img class="my-3" src="images/submissions-individual.svg" alt="" width="100%">
+        </article>
+        <article id="releasing-scores" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Releasing all scores</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>The release scores button located on the sidebar releases or sends the final score to examinees' email address. The score can also be released individually or automatically. Below shows the sample email received after releasing scores. </p>
+          </section>
+          <img class="my-3" src="images/release-score-email.svg" alt="" style="max-width:400px;width:100%">
+        </article>
+        <article id="saving-email-address" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Saving email address</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>Saving email addresses creates a group email file. These saves all the email addresses from all submissions.</p>
+          </section>
+        </article>
+        <article id="exporting-google-sheets" class="my-4">
+          <header class="my-3" style="font-size: 20px;">
+            <span>Exporting to Google Sheets</span>
+          </header>
+          <section class="text-justify my-3" style="text-indent: 30px;">
+            <p>In exporting to Google Sheets, only the information displayed in summary tab are exported. The created sheets file be be uploaded into the assessment owner's Google Drive. Below is the sample assessment submissions exported to Google Sheets.</p>
+          </section>
+          <img class="my-3" src="images/exported-sheets.svg" alt="" style="width:100%">
+        </article>
+      </article>
+    </article>
+  </main>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
